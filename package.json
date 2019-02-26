@@ -1,0 +1,11 @@
+{
+  "name": "serverless-email-sub",
+  "version": "1.0.0",
+  "description": "serverless for emailer",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
