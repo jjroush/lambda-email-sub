@@ -2,7 +2,7 @@
 const config = require('./config')
 const mailgun = require('mailgun-js')({apiKey: config.MAIL_GUN_KEY, domain: config.DOMAIN});
 
-module.exports.hello = async (event, context) => {
+module.exports.emailSub = async (event, context) => {
   return {
     statusCode: 200,
     body: JSON.stringify({
@@ -13,13 +13,13 @@ module.exports.hello = async (event, context) => {
   };
 };
 
-const list = mailgun.lists(`mylist@${config.domain}`);
+// const list = mailgun.lists(`${config.NAME}@${config.DOMAIN}`);
 
-const bob = {
-  subscribed: true,
-  address: 'bob@example.com'
-};
+// const bob = {
+//   subscribed: true,
+//   address: 'bob@example.com'
+// };
 
-list.members().create(bob, function (error, data) {
-  console.log(data);
-});
+// list.members().create(bob, function (error, data) {
+//   console.log(data);
+// });
